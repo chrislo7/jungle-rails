@@ -17,7 +17,7 @@
         <tbody>
           <% @order_total = 0 %>
           <% @order.line_items.each do |line_item| %>
-          <%= render 'item', line_item: line_item %>
+            <%= render 'item', line_item: line_item %>
           <% end %>
         </tbody>
         <tfoot>
