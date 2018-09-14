@@ -1,0 +1,6 @@
+<article class="review">
+  <% user = User.find review.user_id %>
+  <p>User: <%= user.name %></p>
+  <p>Rating: <%= review.rating %></p>
+  <p>Description: <%= review.description%></p>
+</article>
