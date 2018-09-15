@@ -1,6 +1,9 @@
-<article class="review">
+<article class="review dl-horizontal">
   <% user = User.find review.user_id %>
-  <p>User: <%= user.name %></p>
-  <p>Rating: <%= review.rating %></p>
-  <p>Description: <%= review.description%></p>
+  <dt>User</dt>
+   <dd><%= user.name %></dd>
+   <dt>Rating</dt>
+   <dd><%= review.rating %></dd>
+   <dt>Description</dt>
+   <dd><%= review.description%></dd>
 </article>

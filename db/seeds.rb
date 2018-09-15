@@ -22,13 +22,12 @@ end
 # Let's do this ...
 
 ## USERS
-puts "Finding / Creating Users ..."
-user1 = User.find_or_create_by! ({
-  first_name: Faker::Name.first_name,
-  last_name: Faker::Name.last_name,
+puts "Finding or Creating Users ..."
+ user1 = User.find_or_create_by! ({
+  name: Faker::Name.name,
   email: Faker::Internet.email,
   password_digest: Faker::Internet.password,
-})
+  })
 
 
 ## CATEGORIES
@@ -166,8 +165,8 @@ cat3.products.create!({
  Review.create!({
  product_id: 4,
  user_id: 1,
- description: Faker::Hipster.paragraph(2),
+ description: Faker::Hipster.paragraph(3),
  rating: 4
 })
 
-puts "Done!"
+puts "DONE!"
