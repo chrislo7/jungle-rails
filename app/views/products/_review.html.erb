@@ -6,4 +6,6 @@
    <dd><%= review.rating %></dd>
    <dt>Description</dt>
    <dd><%= review.description%></dd>
+   <dt>Created At</dt>
+   <dd><%= review.created_at.strftime('%B %d %Y, %A') %></dd>
 </article>
