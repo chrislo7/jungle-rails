@@ -1,31 +1,26 @@
-review {
+.review {
   margin: 0;
   padding: 0;
-  margin-top: 50px;
-  display: flex;
+  margin-top: 20px;
   justify-content: space-around;
-  border: 1px solid purple;
-  line-height: 2em;
   word-break: break-all;
-  .reviewer {
-  }
-   .description {
+
+  .review-description {
     margin: 0;
-    padding: 15px;
+    padding: 5px;
     width: 55%;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
-    line-height: 1em;
-    font-size: 1.1em;
-    text-align: left;
   }
-   .rating {
+
+  .review-rating {
     text-align: left;
     margin: 0;
-    padding: 10px;
-    font-size: 1.3em;
-     .rating-num {
-      color: red;
-    }
+    padding: 5px;
+
+  }
+
+  .review-heading {
+    text-align: left;
   }
 }

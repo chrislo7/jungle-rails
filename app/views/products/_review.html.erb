@@ -1,11 +1,11 @@
 <article class="review dl-horizontal">
   <% user = User.find review.user_id %>
-  <dt>User</dt>
+  <dt class="review-heading">User</dt>
    <dd><%= user.name %></dd>
-   <dt>Rating</dt>
+  <dt class="review-heading">Rating</dt>
    <dd><%= review.rating %></dd>
-   <dt>Description</dt>
+  <dt class="review-heading">Description</dt>
    <dd><%= review.description%></dd>
-   <dt>Created At</dt>
+  <dt class="review-heading">Created At</dt>
    <dd><%= review.created_at.strftime('%B %d %Y, %A') %></dd>
 </article>
