@@ -15,7 +15,7 @@ RSpec.describe User, type: :model do
     end
 
     it "must have a password with minimum 8 characters" do
-      @user = User.new({first_name: "Andrew", last_name: "Hsieh", email: "andrew@andrew.com", password: "under8", password_confirmation: "under8"})
+      @user = User.new({first_name: "Vincent", last_name: "Ly", email: "vincent@vincent.com", password: "under8", password_confirmation: "under8"})
       @user.save
       expect(@user.errors.full_messages).to include "Password is too short (minimum is 8 characters)"
     end

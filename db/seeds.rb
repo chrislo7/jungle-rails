@@ -22,12 +22,12 @@ end
 # Let's do this ...
 
 ## USERS
-puts "Finding or Creating Users ..."
- user1 = User.find_or_create_by! ({
+puts "Creating Users ..."
+ user1 = User.create! ({
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
-  password_digest: Faker::Internet.password
+  password: Faker::Internet.password
   })
 
 

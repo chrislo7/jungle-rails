@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :last_name,       presence: true
   validates :email,           presence: true, uniqueness: {case_sensitive: false}
   validates :password,        presence: true, length: {minimum: 8}
-  validates :password_digest, presence: true
+
   def self.authenticate_with_credentials(email, password)
     email_stripped_downcase = email.strip.downcase
     user = User.where("email = ?", email_stripped_downcase).first
@@ -18,3 +18,4 @@ class User < ActiveRecord::Base
     end
   end
 end
+
