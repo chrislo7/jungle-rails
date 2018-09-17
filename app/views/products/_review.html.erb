@@ -8,4 +8,7 @@
    <dd><%= review.description%></dd>
   <dt class="review-heading">Created At</dt>
    <dd><%= review.created_at.strftime('%B %d %Y, %A') %></dd>
+   <% if current_user == user %>
+   <%= link_to 'Delete', product_review_path(review.product_id, review.id), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-primary' %>
+   <% end %>
 </article>
