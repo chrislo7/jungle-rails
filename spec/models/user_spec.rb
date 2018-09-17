@@ -50,6 +50,16 @@ RSpec.describe User, type: :model do
       @user = User.create({first_name: "Chris",last_name: "Lo", email: "chris@chris.com", password: "password", password_confirmation: "password"})
       expect(User.authenticate_with_credentials(@user.email, "incorrect_password")).to eq(nil)
     end
+
+    it "should return user regardless of spacing before & after" do
+      @user = User.create({first_name: "Chris",last_name: "Lo", email: "chris@chris.com", password: "password", password_confirmation: "password"})
+      expect(User.authenticate_with_credentials("    #{@user.email}", @user.password)).to eq(@user)
+    end
+
+    it "should return user regardless of casing for email" do
+      @user = User.create({first_name: "Chris",last_name: "Lo", email: "chris@chris.com", password: "password", password_confirmation: "password"})
+      expect(User.authenticate_with_credentials(@user.email.upcase, @user.password)).to eq(@user)
+    end
   end
 
 end
