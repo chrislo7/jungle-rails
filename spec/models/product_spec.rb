@@ -22,12 +22,14 @@ RSpec.describe Product, type: :model do
       @product.save
       expect(@product.errors.full_messages).to include "Price can't be blank"
     end
+
     it "should have a quantity" do
       @category = Category.new
       @product = Product.new ({name: 'JavaScript Scripture', price: 789987, quantity: nil, category: @category})
       @product.save
       expect(@product.errors.full_messages).to include "Quantity can't be blank"
     end
+
     it "should have a category" do
       @category = Category.new
       @product = Product.new ({name: 'Rspec Revolver', price: 134431, quantity: 4, category: nil})

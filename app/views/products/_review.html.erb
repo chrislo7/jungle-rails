@@ -1,7 +1,7 @@
 <article class="review dl-horizontal">
   <% user = User.find review.user_id %>
   <dt class="review-heading">User</dt>
-   <dd><%= user.name %></dd>
+   <dd><%= user.first_name %></dd>
   <dt class="review-heading">Rating</dt>
    <dd><%= review.rating %></dd>
   <dt class="review-heading">Description</dt>
