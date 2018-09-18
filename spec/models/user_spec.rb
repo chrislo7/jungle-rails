@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'Validations' do
+
     it "must have a password" do
       @user = User.new({first_name: "Chris",last_name: "Lo", email: "chris@chris.com", password: nil, password_confirmation: "password"})
       @user.save
